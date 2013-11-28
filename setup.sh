@@ -40,3 +40,21 @@ git config --global user.email isurae@gmail.com
 git config --global core.editor vim
 git config --global mrege.tool vimdiff
 
+# Dev environment
+mkdir -p $HOME/Devel
+
+# Python setup
+sudo apt-get install -y python-pip
+sudo apt-get install -y python-virtualenv
+sudo pip install virtualenvwrapper
+
+# Virtualenvwrapper setup
+echo "\n" >> $HOME/.bashrc
+echo "export WORKON_HOME=$HOME/.virtualenvs" >> $HOME/.bashrc
+echo "export PROJECT_HOME=$HOME/Devel" >> $HOME/.bashrc
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> $HOME/.bashrc
+source $HOME/.bashrc
+mkvirtualenv nfldraft
+workon nfldraft
+
+#
