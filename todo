@@ -1,7 +1,12 @@
 [x] collect team needs data
 [x] team needs data model and import
-[] homepage layout (bootstrap)
-[] display pre-draft data on homepae
+[x] homepage layout (bootstrap)
+[x] display pre-draft data on homepae
 [x] design drafting algorithm/forumula
 [] implement drafting algorithm
 [] report draft results in data model
+[] improve home page layout and style
+[] results page layout (bootstrap)
+[] put results into template
+[] add team logos
+[] add player photos
