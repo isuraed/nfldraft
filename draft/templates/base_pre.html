@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block body_content %}
+<div class="row">
+    <div class="col-md-12">
+        <button type="button" class="btn btn-default">Run Draft</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <table class="table">
+            <tr>
+                <th>Pick</th>
+                <th>Team</th>
+                <th>Needs</th>
+            </tr>
+            {% for elem in draft_order %}
+            <tr>
+                <td>{{ elem.pick }}</td>
+                <td>{{ elem.team }}</td>
+                <td>{{ elem.team.needs_as_str }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="col-md-6">
+        <table class="table">
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>College</th>
+                <th>Grade</th>
+            </tr>
+            {% for elem in top_players %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ elem.name }}</td>
+                <td>{{ elem.position }}</td>
+                <td>{{ elem.college }}</td>
+                <td>{{ elem.grade }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock body_content %}
