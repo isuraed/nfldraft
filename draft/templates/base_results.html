@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block body_content %}
+<div class="row">
+    <div class="col-md-12">
+        <ul class="pagination">
+            <li><a href="/results/by-round/1/">1</a></li>
+            <li><a href="/results/by-round/2/">2</a></li>
+            <li><a href="/results/by-round/3/">3</a></li>
+            <li><a href="/results/by-round/4/">4</a></li>
+            <li><a href="/results/by-round/5/">5</a></li>
+            <li><a href="/results/by-round/6/">6</a></li>
+            <li><a href="/results/by-round/7/">7</a></li>
+        </ul>
+        <table class="table">
+            <tr>
+                <th>Round</th>
+                <th>Pick</th>
+                <th>Team</th>
+                <th>Player</th>
+                <th>Position</th>
+                <th>Grade</th>
+            </tr>
+            {% for elem in draft_picks %}
+            <tr>
+                <td>{{ elem.round }}</td>
+                <td>{{ elem.pick }}</td>
+                <td>{{ elem.team }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock body_content %}
