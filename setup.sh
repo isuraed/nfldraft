@@ -1,4 +1,4 @@
-# For Ubuntu 12 LTS.
+# For Ubuntu 13
 
 # Update and cleanup system.
 sudo apt-get update
@@ -38,7 +38,8 @@ git clone git://github.com/altercation/vim-colors-solarized.git
 git config --global user.name "Isura Edirisinghe"
 git config --global user.email isurae@gmail.com
 git config --global core.editor vim
-git config --global mrege.tool vimdiff
+git config --global diff.tool vimdiff
+git config --global merge.tool vimdiff
 
 # Dev environment
 mkdir -p $HOME/Devel
@@ -56,5 +57,3 @@ echo "source /usr/local/bin/virtualenvwrapper.sh" >> $HOME/.bashrc
 source $HOME/.bashrc
 mkvirtualenv nfldraft
 workon nfldraft
-
-#
